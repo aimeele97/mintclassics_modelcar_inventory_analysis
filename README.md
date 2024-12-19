@@ -32,10 +32,7 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 
 
 2. **Stock Distribution per Product Line**:  
-   ![image-6](image-6.png)
-
-
-
+   ![./img/-6](./img/image-6.png)
 
 
 ---
@@ -44,7 +41,7 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 
 
 The East warehouse has the most products for classic car whereas the South stored the least products, mainly for ships, trains, trucks and buses product lines.  
-![alt text](image-13.png)
+![alt text](./img/image-13.png)
 
 ### 1. **Product Distribution and Sales Movements**:
 
@@ -59,17 +56,17 @@ The East warehouse has the most products for classic car whereas the South store
   The table highlights product movements across the four warehouses, showing higher activity in the **East Warehouse** and significantly lower activity in the **South Warehouse**.
 
 - **Number of Items Ordered per Warehouse**:  
-   ![image-7](image-7.png)
+   ![./img/-7](./img/image-7.png)
 
 ### 3. **Warehouse Capacity Utilization**:
 
 - The **West Warehouse** is operating at **50% capacity**, indicating that it can potentially store more inventory, which could allow for the consolidation of stock from the **South Warehouse**.
 
 - **Warehouse Capacity vs Stock Levels**:  
-  ![image-11](image-11.png)
+  ![./img/-11](./img/image-11.png)
 
 - **Products in Inventory (Jan 2003 to May 2005)**:  
-   ![alt text](image-14.png)
+   ![alt text](./img/image-14.png)
 
 ### 4. **Stock vs Sales Patterns**:
 
@@ -78,7 +75,7 @@ The East warehouse has the most products for classic car whereas the South store
 - Some products have excessive stock compared to the amount being sold, leading to overstocking.
 
 - **Stock Excess and Sales Data**:  
-  ![image-12](image-12.png)
+  ![./img/-12](./img/image-12.png)
 
 
 
