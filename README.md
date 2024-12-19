@@ -30,22 +30,26 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 - **West Warehouse**: Operates at 50% capacity, suggesting space for more stock.
 - **North Warehouse**: Moderate stock levels.
 
+- **Warehouse Capacity vs Stock Levels**:  
+  ![./img/-11](./img/image-11.png)
+
 ---
 
 ## Data Insights
 
+### 1. **Warehouses and Product Lines**
+
 The East warehouse has the most products for classic car whereas the South stored the least products, mainly for ships, trains, trucks and buses product lines.  
 ![alt text](./img/image-13.png)
 
-### 1. **Product Distribution and Sales Movements**:
-
 - **Mint Classics** has a total of **110 products**, with the majority stored in the **East Warehouse**, accounting for **39% of total stock**.
-- The East Warehouse shows the highest sales and stock movements, likely due to its larger capacity.
 
 **Stock Distribution per Product Line**:  
    ![./img/-6](./img/image-6.png)
 
 ### 2. **Stock vs. Sales**:
+
+- The East Warehouse shows the highest sales and stock movements, likely due to its larger capacity.
 
 - The **South Warehouse** shows the least movement, especially for products in the **Ships, Trains, Trucks, and Buses** product line. It stores only 23 products from this line, which suggests these products are slow-moving.
 
@@ -59,9 +63,6 @@ The East warehouse has the most products for classic car whereas the South store
 
 - The **West Warehouse** is operating at **50% capacity**, indicating that it can potentially store more inventory, which could allow for the consolidation of stock from the **South Warehouse**.
 
-- **Warehouse Capacity vs Stock Levels**:  
-  ![./img/-11](./img/image-11.png)
-
 - **Products in Inventory (Jan 2003 to May 2005)**:  
    ![alt text](./img/image-14.png)
 
@@ -73,8 +74,6 @@ The East warehouse has the most products for classic car whereas the South store
 
 - **Stock Excess and Sales Data**:  
   ![./img/-12](./img/image-12.png)
-
-
 
 ---
 
