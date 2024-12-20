@@ -58,8 +58,9 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 - **East Warehouse**: has 1 product line and contribute ~ 39.48% of total stocks.
 - **South Warehouse**: has 3 product lines and contribute ~ 14.3 % of total stocks.
 - **West Warehouse**: has 1 product line and contribute ~ 22.5% of total stocks.
-- **North Warehouse**: has 2 product line and contribute ~ 23.72% of total stocks.
+- **North Warehouse**: has 2 product lines and contribute ~ 23.72% of total stocks.
 
+**Stocks in each warehouse**
 <img src="./img/image-26.png" alt="Warehouse Layout" style="width: auto; height: auto;">
 
 **Warehouse Capacity**:  
@@ -108,7 +109,7 @@ Note: The company should also consider factors that impact on the delivery time 
 
 In my opinion, we should keep the warehouses in the North and East because of the sales volume and profitability they bring. We should consider managing the stock level that is suitable for each item by predicting how many items may be sold in the next month or year to optimize storage costs and warehouse efficiency.
 
-For the purpose of speeding up delivery times, I recommend <span style="color: coral">**closing the West facility**</span>, which currently stores the vintage car product line, and transferring the stock to the South warehouse. The South warehouse has more flexibility in shipping times, typically within 2 to 5 days, and is operating at only 50% capacity. The South warehouse offers more flexibility in shipping times, typically within 2 to 5 days, and operates at 50% capacity. Relocating inventory from the West to the South would allow for better use of storage space and improved delivery flexibility.
+For the purpose of speeding up delivery times, I recommend <code style="color:coral">**closing the West facility**</code>, which currently stores the vintage car product line, and transferring the stock to the South warehouse. The South warehouse has more flexibility in shipping times, typically within 2 to 5 days, and is operating at only 50% capacity. The South warehouse offers more flexibility in shipping times, typically within 2 to 5 days, and operates at 50% capacity. Relocating inventory from the West to the South would allow for better use of storage space and improved delivery flexibility.
 
 Additionally, implementing clearance strategies for slow-moving stock in both warehouses would help reduce transfer costs and free up space in the South warehouse for future inventory. A more detailed analysis of other relevant factors could further support and refine these recommendations.
 
