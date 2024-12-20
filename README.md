@@ -62,23 +62,21 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 - **West Warehouse**: has 1 product line and contribute ~ 22.5% of total stocks.
 - **North Warehouse**: has 2 product lines and contribute ~ 23.72% of total stocks.
 
-**Total stocks per warehouse:**  
-
 <img src="./img/image-26.png" alt="Warehouse Layout" style="width: auto; height: auto;">
 
-**Warehouse Capacity:**  
+**Warehouse Capacity:** None of the four warehouses are operating at full capacity, with the West warehouse running at just 50%, the lowest among others.  
 
 <img src="./img/image-11.png" alt="Warehouse Capacity" style="width: auto; height: auto;">
 
-**Stock Distribution per Product Line:**  
+**Stock Distribution per Product Line:**  The East and West warehouses (b and c) held the largest quantity of the current stock level.  
 
 <img src="./img/image-6.png" alt="Stock Distribution" style="width: auto; height: auto;">
 
-**The stock level and quantity sold per warehouse:**  
+**The stock level and quantity sold per warehouse:** The product lines in the East and North warehouses have the highest sales volume.  
 
 <img src="./img/image-30.png" alt="Stock and Sales Per Warehouse" style="width: auto; height: auto;">
 
-**The stock level and quantity sold seem to be inconsistent per product:**  
+**Comparing Stock Quantity and Sales Volume:** There is an inconsistency between stock levels and sales volume per item, which should be addressed to free up storage space and optimize storage efficiency for sales.  
 
 <img src="./img/image-28.png" alt="Stock vs Sales Inconsistency" style="width: auto; height: auto;">
 
