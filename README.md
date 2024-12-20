@@ -34,11 +34,12 @@ The scheme includes tables:
 
 Due to the scope of this project, I only use tables: warehouses, products, orders, orderdetails for analysis.
 
-Data scheme  
+**Data scheme:**
 
 <img src="./img/image-18.png" alt="My Image" style="width: 600px; height: auto;">
 
-Relationship explanation :  
+**Relationship explanation:**
+
 <img src="./img/image-1.png" alt="ERD Relationship" style="width: auto; height: auto;">
 
 - ___one to one:___ each record in Entity A is related to exactly one record in Entity B, and vice versa.
@@ -55,12 +56,13 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 <img src="./img/image-29.png" alt="Warehouse Distribution" style="width: auto; height: auto;">
 
 ### Warehouse Layout:
+
 - **East Warehouse**: has 1 product line and contribute ~ 39.48% of total stocks.
 - **South Warehouse**: has 3 product lines and contribute ~ 14.3 % of total stocks.
 - **West Warehouse**: has 1 product line and contribute ~ 22.5% of total stocks.
 - **North Warehouse**: has 2 product lines and contribute ~ 23.72% of total stocks.
 
-**Stocks in each warehouse**
+**Total stocks per warehouse:**
 <img src="./img/image-26.png" alt="Warehouse Layout" style="width: auto; height: auto;">
 
 **Warehouse Capacity**:  
