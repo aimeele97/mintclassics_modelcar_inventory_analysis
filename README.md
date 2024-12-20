@@ -62,7 +62,7 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 
 <img src="./img/image-26.png" alt="Warehouse Layout" style="width: auto; height: auto;">
 
-**Warehouse Capacity**:
+**Warehouse Capacity**:  
 <img src="./img/image-11.png" alt="Warehouse Capacity" style="width: auto; height: auto;">
 
 **Stock Distribution per Product Line**:  
