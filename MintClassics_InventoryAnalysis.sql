@@ -171,16 +171,14 @@ SELECT
     p.productLine,
     DATEDIFF(shippedDate, orderDate) day,
     SUM(quantityOrdered) totalQuantity
-FROM
-    orders o
-        JOIN
-    orderdetails od ON od.orderNumber = o.orderNumber
-        JOIN
-    products p ON p.productCode = od.productCode
-        JOIN
-    warehouses w ON w.warehouseCode = p.warehouseCode
-WHERE
-    status <> 'shipped'
+FROM orders o
+JOIN orderdetails od 
+    ON od.orderNumber = o.orderNumber
+JOIN products p 
+    ON p.productCode = od.productCode
+JOIN warehouses w 
+    ON w.warehouseCode = p.warehouseCode
+WHERE status <> 'shipped'
         AND w.warehouseCode IN ('c' , 'd')
         AND DATEDIFF(shippedDate, orderDate) < 10
 GROUP BY p.productLine , DATEDIFF(shippedDate, orderDate)
