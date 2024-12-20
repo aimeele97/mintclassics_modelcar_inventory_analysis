@@ -5,37 +5,33 @@ SELECT
     w.warehouseName,
     COUNT(DISTINCT p.productLine) AS productLineQty,
     SUM(p.quantityInStock) AS numberInStocks,
-    ROUND(SUM(p.quantityInStock) / (SELECT 
-                    SUM(quantityInStock)
-                FROM
-                    products) * 100,
-            2) percent
-FROM
-    products p
-        JOIN
-    warehouses w ON w.warehouseCode = p.warehouseCode
+    ROUND(SUM(p.quantityInStock) / 
+                (SELECT SUM(quantityInStock)
+                FROM products) * 100, 2) percent
+FROM products p
+JOIN warehouses w 
+    ON w.warehouseCode = p.warehouseCode
 GROUP BY warehouseCode , warehouseName;
 
 -- 2. Product lines distribution by warehouses
 
-SELECT DISTINCT
-    w.warehouseCode, w.warehouseName, productLine
-FROM
-    products p
-        JOIN
-    warehouses w ON w.warehouseCode = p.warehouseCode
+SELECT DISTINCT w.warehouseCode, 
+    w.warehouseName, 
+    productLine
+FROM products p
+JOIN warehouses w 
+    ON w.warehouseCode = p.warehouseCode
 ORDER BY w.warehouseCode;
 
 -- 3. Items Sold per warehouse
 
 SELECT 
     w.warehouseName, SUM(quantityOrdered) AS itemsSold
-FROM
-    orderdetails o
-        JOIN
-    products p ON o.productCode = p.productCode
-        JOIN
-    warehouses w ON p.warehouseCode = w.warehouseCode
+FROM orderdetails o
+JOIN products p 
+    ON o.productCode = p.productCode
+JOIN warehouses w 
+    ON p.warehouseCode = w.warehouseCode
 GROUP BY w.warehouseName;
 
 -- 4. Items in stock and quantity sold group by product and warehouse code
@@ -46,10 +42,9 @@ SELECT
     p.productCode,
     SUM(p.quantityInStock) AS InStocks,
     SUM(o.quantityOrdered) AS qtyordered
-FROM
-    products p
-        JOIN
-    orderdetails o ON o.productCode = p.productCode
+FROM products p
+JOIN orderdetails o 
+    ON o.productCode = p.productCode
 GROUP BY p.warehouseCode , p.productCode , p.productLine
 ORDER BY qtyordered;
 
@@ -61,7 +56,8 @@ WITH cte AS (
         YEAR(orderDate) AS yy, 
         SUM(od.quantityOrdered) AS totalqtyOrders
     FROM orders o 
-    JOIN orderdetails od ON o.orderNumber = od.orderNumber 
+    JOIN orderdetails od 
+        ON o.orderNumber = od.orderNumber 
     GROUP BY 
         MONTH(orderDate), YEAR(orderDate)
 )
@@ -71,10 +67,8 @@ SELECT
     SUM(totalqtyOrders) OVER (PARTITION BY mm) AS qtySoldMonthly, 
     SUM(totalqtyOrders) OVER (PARTITION BY yy) AS qtySoldYearly 
 FROM cte 
-GROUP BY 
-    mm, yy
-ORDER BY 
-    yy, mm;
+GROUP BY mm, yy
+ORDER BY yy, mm;
 
 -- 6. The stock level and quantiy sold per warehouse
 
@@ -83,12 +77,11 @@ SELECT
     w.warehouseName,
     SUM(quantityInStock) AS InStocks,
     SUM(quantityOrdered) AS qtyordered
-FROM
-    products p
-        JOIN
-    orderdetails o ON o.productCode = p.productCode
-        JOIN
-    warehouses w ON w.warehouseCode = p.warehouseCode
+FROM products p
+JOIN orderdetails o 
+    ON o.productCode = p.productCode
+JOIN warehouses w 
+    ON w.warehouseCode = p.warehouseCode
 GROUP BY w.warehouseCode , w.warehouseName;
 
 -- 7. Total Revenue of each items order by highest revenue
@@ -98,10 +91,9 @@ SELECT
 FROM
     (SELECT 
         productCode, quantityOrdered * priceEach totalPrice
-    FROM
-        orderdetails) tem
+    FROM orderdetails) tem
 JOIN products p 
-ON p.productCode = tem.productCode
+    ON p.productCode = tem.productCode
 GROUP BY tem.productCode , p.productLine
 ORDER BY totalRevenue DESC;
     
@@ -115,7 +107,7 @@ FROM
     FROM
         orderdetails) tem
 JOIN products p 
-ON p.productCode = tem.productCode
+    ON p.productCode = tem.productCode
 GROUP BY tem.productCode , p.productLine
 ORDER BY totalRevenue ASC;
     
@@ -131,7 +123,7 @@ FROM
     FROM
         orderdetails) tem
 JOIN products p 
-ON p.productCode = tem.productCode
+    ON p.productCode = tem.productCode
 GROUP BY p.productLine
 ORDER BY totalRevenue ASC;
     
@@ -141,9 +133,8 @@ SELECT
 FROM
     orderdetails od
 JOIN orders o 
-ON o.orderNumber = od.orderNumber
-WHERE
-    status = 'shipped';
+    ON o.orderNumber = od.orderNumber
+WHERE status = 'shipped';
 
 -- 11. Shipping duration by each orders
 SELECT 
@@ -153,7 +144,7 @@ SELECT
 FROM
     orderdetails od
 JOIN orders o 
-ON o.orderNumber = od.orderNumber
+    ON o.orderNumber = od.orderNumber
 WHERE
     status = 'shipped'
 GROUP BY o.orderNumber , DATEDIFF(shippedDate, orderDate)
@@ -169,7 +160,7 @@ FROM
             comments
     FROM orderdetails od
 JOIN orders o 
-ON o.orderNumber = od.orderNumber
+    ON o.orderNumber = od.orderNumber
 WHERE status = 'shipped'
     AND DATEDIFF(shippedDate, orderDate) < 10
 GROUP BY o.orderNumber , DATEDIFF(shippedDate, orderDate)) temp;
