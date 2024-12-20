@@ -106,7 +106,7 @@ The total of distinct orders now become 302 orders.
 
 <img src="./img/image-24.png" alt="Shipping Data After Removing Outlier" style="width: auto; height: auto;">
 
-Look at the shipping day for each product line; it is more common that Vintage Cars (the West warehouse) have the most order delivery in 4 days, whereas items in the South warehouse have delivery times varying from 2 to 5 days, which is more flexible than the warehouse in the West. 
+Look at the shipping day for each product line; it is more common that Vintage Cars product line (the West warehouse) have the most order delivery in 4 days, whereas items in the South warehouse have delivery times varying from 2 to 5 days, which is more flexible than the warehouse in the West. 
 
 <img src="./img/image-25.png" alt="Delivery Times by Product Line" style="width: auto; height: auto;">
 
@@ -116,7 +116,6 @@ ___Note: The company should also consider factors that impact on the delivery ti
 
 In my opinion, we should keep the warehouses in the North and East because of the sales volume and profitability they bring. We should consider managing the stock level that is suitable for each item by predicting how many items may be sold in the next month or year to optimize storage costs and warehouse efficiency.
 
-For the purpose of speeding up delivery times, I recommend <code style="color:coral">**closing the West facility**</code>, which currently stores the vintage car product line, and transferring the stock to the South warehouse. The South warehouse has more flexibility in shipping times, typically within 2 to 5 days, and is operating at only 50% capacity. Relocating inventory from the West to the South would allow for better use of storage space and improved delivery flexibility.
+To expedite delivery times, I recommend **closing the West facility**, which currently stores the vintage car product line, and transferring the stock to the South warehouse. The South warehouse offers more flexibility in shipping times, typically ranging from 2 to 5 days. However, it is currently operating at 75% capacity. Before proceeding with the reallocation, we should implement clearance strategies for slow-moving stock in both warehouses. This would help minimize transfer costs and free up space in the South warehouse for incoming stock.
 
-Prior to reallocating, we should consider implementing clearance strategies for slow-moving stock in both warehouses. This would help reduce transfer costs and free up space in the South warehouse for future inventory. A more detailed analysis of other relevant factors could further refine and support these recommendations.
-
+This analysis is based on my understanding of the domain, but for a more thorough and precise evaluation, we should consider additional relevant factors to further refine and support these recommendations.
