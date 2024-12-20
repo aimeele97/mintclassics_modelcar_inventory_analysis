@@ -36,10 +36,10 @@ Due to the scope of this project, I only use tables: warehouses, products, order
 
 Data scheme  
 
-<img src="./img/image-18.png" alt="My Image" style="width: auto; height: auto;">
+<img src="./img/image-18.png" alt="My Image" style="width: 600px; height: auto;">
 
 Relationship explanation :  
-<img src="erdrelation.png" alt="ERD Relationship" style="width: auto; height: auto;">
+<img src="./img/image-1.png" alt="ERD Relationship" style="width: auto; height: auto;">
 
 - ___one to one:___ each record in Entity A is related to exactly one record in Entity B, and vice versa.
 - ___one to many:___ each record in Entity A can be related to multiple records in Entity B, but each record in Entity B is related to only one record in Entity A.
