@@ -4,7 +4,7 @@
 <!-- TOC -->
 
 - [Overview](#overview)
-    - [Key Questions to Address:](#key-questions-to-address)
+    - [Key Questions to Address](#key-questions-to-address)
 - [Project Objectives](#project-objectives)
 - [Data scheme ERD](#data-scheme-erd)
 - [Data Insights](#data-insights)
