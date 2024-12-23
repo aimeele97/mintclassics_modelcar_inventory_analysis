@@ -1,4 +1,17 @@
-# Data Analysis - MintClassics Inventory Optimization and Warehouse Evaluation
+<!-- TOC -->
+
+- [Overview](#overview)
+    - [Key Questions to Address:](#key-questions-to-address)
+- [Project Objectives](#project-objectives)
+- [Data scheme ERD](#data-scheme-erd)
+- [Data Insights](#data-insights)
+    - [Company Overview](#company-overview)
+    - [Warehouse Layout](#warehouse-layout)
+- [Conclusion](#conclusion)
+
+<!-- /TOC -->
+
+
 
 ## Overview
 
@@ -20,7 +33,7 @@ The answers to these questions will help formulate suggestions and recommendatio
 
 ---
 
-## Data scheme (ERD):
+## Data scheme (ERD)
 
 The scheme includes tables:  
 - warehouses
@@ -55,7 +68,7 @@ The company has **7 product lines** stored in **4 warehouses**. The products are
 
 <img src="./img/image-29.png" alt="Warehouse Distribution" style="width: auto; height: auto;">
 
-### Warehouse Layout:
+### Warehouse Layout
 
 - **East Warehouse**: has 1 product line and contribute ~ 39.48% of total stocks.
 - **South Warehouse**: has 3 product lines and contribute ~ 14.3 % of total stocks.
