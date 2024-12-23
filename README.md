@@ -20,7 +20,7 @@
 
 This analysis aims to evaluate the current inventory system for the model car company, Mint Classics, using the historical transactions data from Jan 2003 to May 2005 to assess potential opportunities for warehouse reorganization or reduction, and provide data-driven insights and recommendations.
 
-### Key Questions to Address:
+### Key Questions to Address
 
 1. **Where are items stored, and could a warehouse be eliminated if the items were rearranged?**
 2. **How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?**
