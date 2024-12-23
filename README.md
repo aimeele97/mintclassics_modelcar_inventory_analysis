@@ -1,3 +1,6 @@
+# Mint Classics: A Model Car Inventory and Warehouse Management Analysis  
+
+## Table of Contents  
 <!-- TOC -->
 
 - [Overview](#overview)
