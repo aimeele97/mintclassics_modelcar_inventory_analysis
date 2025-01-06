@@ -1,137 +1,138 @@
-# Mint Classics: A Model Car Inventory and Warehouse Management Analysis  
+# Mint Classics Inventory and Warehouse Management
 
-## Table of Contents  
+# Table of Contents
 <!-- TOC -->
 
-- [Overview](#overview)
-    - [Key Questions to Address](#key-questions-to-address)
-- [Project Objectives](#project-objectives)
-- [Data scheme ERD](#data-scheme-erd)
-- [Data Insights](#data-insights)
-    - [Company Overview](#company-overview)
-    - [Warehouse Layout](#warehouse-layout)
-- [Conclusion](#conclusion)
+- [Project Background](#project-background)
+- [Data Structure & Initial Checks](#data-structure--initial-checks)
+- [Executive Summary](#executive-summary)
+- [Insights Deep Dive](#insights-deep-dive)
+- [Recommendations](#recommendations)
+- [Assumptions and Caveats](#assumptions-and-caveats)
 
 <!-- /TOC -->
 
+# Project Background
+Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
+
+My task is to conduct an exploratory data analysis (EDA)to investigate if there are any patterns or themes that may influence the reduction or reorganization of inventory in the Mint Classics storage facilities.
+
+Insights and recommendations are provided on the following key areas:
+
+- **Category 1:** Where are items stored and if they were rearranged?
+- **Category 2:** How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?
+- **Category 3:** What is the average shipping time for each product line?
+- **Category 4:** Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
+
+The SQL queries for the dataset source are available here [link](./MintClassics_Scheme.sql).
+
+The SQL queries regarding various business questions can be found here [link](./MintClassics_InventoryAnalysis.sql).
+
+An interactive Tableau dashboard used to report and explore sales trends can be found here [link](https://lookerstudio.google.com/reporting/af75d590-c579-4f56-a0ef-7c823bff2abe).
 
 
-## Overview
+# Data Structure & Initial Checks
 
-This analysis aims to evaluate the current inventory system for the model car company, Mint Classics, using the historical transactions data from Jan 2003 to May 2005 to assess potential opportunities for warehouse reorganization or reduction, and provide data-driven insights and recommendations.
+The companies main database structure as seen below consists of nine tables: warehouses, products, productlines, orders, orderdetails, customers, payments, employees, offices, with a total row count of 3,868 records. A description of each table is as follows:
 
-### Key Questions to Address
+- __warehouses:__ Stores information about the company's warehouses, including location and capacity. The company has 4 distinct warehouses.
+- __products:__ Contains details about the products available for sale, such as name, price, and stock. The company offers 110 products.
+- __productlines:__ Categorizes products into different lines or types. The company has 7 distinct product lines.
+- __orders:__ Stores customer orders, including order dates, status, and total amounts. The company has 326 orders.
+- __orderdetails:__ Contains individual product details for each order, such as quantity, price, and discount. There are 2,996 order details.
+- __customers:__  Contains customer information, such as names, contact details, and shipping addresses. There are 122 distinct customers.
+- __payments:__ Tracks customer payments, including amount, date, and payment method. There are 273 payment records.
+- __employees:__ Stores details about employees, including positions, hire dates, and salaries. The company employs 23 people.
+- __offices:__ Information about the company's offices, including location and contact details. The company has 7 offices.
 
-1. **Where are items stored, and could a warehouse be eliminated if the items were rearranged?**
-2. **How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?**
-3. **Are we storing items that are not moving? Are any items candidates for being dropped from the product line?**
+__Entity Relationship Diagram here__
 
-The answers to these questions will help formulate suggestions and recommendations for reducing inventory and potentially closing a warehouse.
+  <img src="./img/image-18.png" alt="My Image" style="width: 600px; height: auto;">
 
-## Project Objectives
+  **Relationship explaination:**
+  
+  <img src="./img/image-1.png" alt="ERD Relationship" style="width: auto; height: auto;">
+  
+  - ___one to one:___ each record in Entity A is related to exactly one record in Entity B, and vice versa.
+  - ___one to many:___ each record in Entity A can be related to multiple records in Entity B, but each record in Entity B is related to only one record in Entity A.
+  - ___many to many:___ multiple records in Entity A can be related to multiple records in Entity B.
 
-1. **Explore products** currently in inventory.
-2. **Identify important factors** that may influence inventory reorganization or reduction.
-3. **Provide analytic insights and recommendations** for warehouse optimization and inventory management.
+# Executive Summary
 
----
+### Overview of Findings
 
-## Data scheme (ERD)
+To optimize operations, focus on the East and North Warehouses, which have high sales, profitability, and underutilized capacity, making them key assets for continued growth. __The West Warehouse should be closed__ due to low revenue, long shipping times, and minimal impact on product diversity, with its stock moved to more efficient locations. The South Warehouse, while holding slower-moving products, should remain operational as a consolidation point with flexible delivery times, serving inventory clearance needs.
+        
 
-The scheme includes tables:  
-- warehouses
-- products
-- productlines
-- orders
-- orderdetails
-- customers
-- payments
-- employees
+  ![alt text](img/image-7.png)
 
-Due to the scope of this project, I only use tables: warehouses, products, orders, orderdetails for analysis.
+# Insights Deep Dive
 
-**Data scheme:**
+### Category 1: Where are items stored and if they were rearranged?
 
-<img src="./img/image-18.png" alt="My Image" style="width: 600px; height: auto;">
+* **Main insight 1.** The items of each prodiucts line are arranged and stored seprately each warehouse.
+    - **West Warehouse**: Vintage Cars (contribute 21.9% of current total stocks)
+    - **South Warehouse**: Trains, Ship, Trucks and Buses (contribute 21.2% of current total stocks)
+    - **East Warehouse**: Classic Cars (contribute 33,7% of current total stocks)
+    - **North Warehouse**: Motorcycles, Planes (contribute 23.2% of current total stocks)
+  
+* **Main insight 2.** None of the four warehouses are operating at full capacity, with the West warehouse running at just 50%, the lowest among others.
 
-**Relationship explanation:**
+  ![alt text](img/image-16.png)
+  ![alt text](img/image-9.png)
 
-<img src="./img/image-1.png" alt="ERD Relationship" style="width: auto; height: auto;">
+### Category 2: How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?
 
-- ___one to one:___ each record in Entity A is related to exactly one record in Entity B, and vice versa.
-- ___one to many:___ each record in Entity A can be related to multiple records in Entity B, but each record in Entity B is related to only one record in Entity A.
-- ___many to many:___ multiple records in Entity A can be related to multiple records in Entity B.
+* **Main insight 1.** The East Warehouse generated the most revenue ($3.85M), while the West Warehouse generated the least ($1.8M). The North Warehouse and South Warehouse generated $2.08M and $1.88M, respectively.
+  
+* **Main insight 2.** The inventory distribution is aligned with sales capacity. For example:
 
----
+    - The East Warehouse holds a large inventory due to high sales volume (5.6M vs. 35.6K units sold).
+    - The South Warehouse holds the least inventory due to its lower sales capacity (2.2M vs. 22.4K units sold).
+  
+* **Main insight 3.** There is a significant excess inventory compared to actual sales. The average sales percentage is only 0.7% of the total stock.
 
-## Data Insights
-### Company Overview
+  ![alt text](img/image-12.png)
 
-The company has **7 product lines** stored in **4 warehouses**. The products are distributed across warehouses as the below table:
 
-<img src="./img/image-29.png" alt="Warehouse Distribution" style="width: auto; height: auto;">
+### Category 3: What is the average shipping time for each product line?
 
-### Warehouse Layout
+* **Main insight.** Shipping times vary between warehouses and product lines:
 
-- **East Warehouse**: has 1 product line and contribute ~ 39.48% of total stocks.
-- **South Warehouse**: has 3 product lines and contribute ~ 14.3 % of total stocks.
-- **West Warehouse**: has 1 product line and contribute ~ 22.5% of total stocks.
-- **North Warehouse**: has 2 product lines and contribute ~ 23.72% of total stocks.
+    - Trains: Fastest shipping time (2 days).
+    -  Ships and Vintage Cars: Slowest shipping times (average 5 days).
 
-<img src="./img/image-26.png" alt="Warehouse Layout" style="width: auto; height: auto;">
+  ![alt text](img/image-13.png)
 
-**Warehouse Capacity:** None of the four warehouses are operating at full capacity, with the West warehouse running at just 50%, the lowest among others.  
 
-<img src="./img/image-11.png" alt="Warehouse Capacity" style="width: auto; height: auto;">
+### Category 4: Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
 
-**Stock Distribution per Product Line:**  The East and West warehouses (b and c) held the largest quantity of the current stock level.  
+* **Main insight 1.** The company offers the total of 109 products. The Classic Cars product line has the most variety (37 products), while Ships has the fewest (9 products). The Vintage Cars line consists of 24 products, and the Motorcycles, Planes, Trucks, and Buses lines have similar numbers (13, 12, and 11 products, respectively).
+  
+* **Main insight 2.** Both Vintage Cars and Classic Cars have a significant number of slow-moving products. These items should be considered for clearance or rearrangement to optimize stock levels.
 
-<img src="./img/image-6.png" alt="Stock Distribution" style="width: auto; height: auto;">
+  ![alt text](img/image-15.png)
 
-**The stock level and quantity sold per warehouse:** The product lines in the East and North warehouses have the highest sales volume.  
+# Recommendations:
 
-<img src="./img/image-30.png" alt="Stock and Sales Per Warehouse" style="width: auto; height: auto;">
+Based on the insights and findings above, we would recommend the executive team to consider the following: 
 
-**Comparing Stock Quantity and Sales Volume:** There is an inconsistency between stock levels and sales volume per item, which should be addressed to free up storage space and optimize storage efficiency for sales.  
+* __Close the West Warehouse__: It operates at low capacity, holds a single product line, and has long delivery times.
+  
+* Focus on East and North Warehouses for continued operation due to their profitability and available capacity.
+  
+* Reorganize the South Warehouse: With 75% capacity utilization and flexible shipping times, it could serve as a consolidation point for slower-moving products.
+  
+* Clearance of slow-moving stock in the Vintage Cars and Classic Cars product lines is recommended to optimize storage and free up space for high-demand items.
+  
+* Monitor and adjust stock levels regularly based on sales trends to avoid overstocking or stockouts.
 
-<img src="./img/image-28.png" alt="Stock vs Sales Inconsistency" style="width: auto; height: auto;">
+# Assumptions and Caveats:
 
-**Quantity Sold by Month and Year (from Jan 2003 to May 2005):** 
-The peak sales season occurs from October to November, followed by a gradual decline until September of the following year.
+Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
 
-<img src="./img/image-14.png" alt="Quantity Sold Over Time" style="width: 450px; height: 850;">
-
-As inspected the total revenue for each item, the most profitable products are the classic cars, motorcycles, and planes product lines. These items are stored in the East and North warehouses, and closing these facilities would carry significant risks for the company due to their high profitability.  
-<img src="./img/image-15.png" alt="Revenue Per Product" style="width: 450px; height: 550;">
-
-Based on the revenue contribution by each product line, we can see that Classic Car product line is the most popular and most revenue-generating compared to others. The least revenue product lines are the trains, ships, trucks, and buses, all of which are located in the South warehouse. This might have less impact if we want to close this warehouse and reallocate these products to other facilities.  
-
-<img src="./img/image-17.png" alt="Revenue by Product Line" style="width: auto; height: auto;">
-
-__Comparing between South and West warehouses to support the closing facility decision__
-
-I decided to look at the location that has shorter delivery time. Firstly, i want to compare only the orders that have been shipped. The below table shows the company has a total of 303 distinct orders which meet the condition.
-
-<img src="./img/image-22.png" alt="Shipped Orders" style="width: auto; height: auto;">
-
-Secondly, I inspected delivery time of these two warehouses. There is one order that the delivery day is 65 days due to customer credit issue. I decided to remove this order from the result set to avoid the bias in the data.  
-
-<img src="./img/image-23.png" alt="Outlier Shipping Data" style="width: auto; height: auto;">
-
-The total of distinct orders now become 302 orders.   
-
-<img src="./img/image-24.png" alt="Shipping Data After Removing Outlier" style="width: auto; height: auto;">
-
-Look at the shipping day for each product line; it is more common that Vintage Cars product line (the West warehouse) have the most order delivery in 4 days, whereas items in the South warehouse have delivery times varying from 2 to 5 days, which is more flexible than the warehouse in the West. 
-
-<img src="./img/image-25.png" alt="Delivery Times by Product Line" style="width: auto; height: auto;">
-
-___Note: The company should also consider factors that impact on the delivery time such as labor resources, how big and complex the warehouse is for pick and pack, and the order volume.___
-
-## Conclusion
-
-I believe we should keep the warehouses in the North and East due to their high sales volume and profitability. We should also manage stock levels based on predicted sales for the next month or year to reduce storage costs and improve warehouse efficiency.  
-
-To speed up delivery times, I suggest **closing the West facility**, which currently stores the vintage car product line, and moving the stock to the South warehouse. The South warehouse is more flexible with shipping times, typically 2 to 5 days, and is only at 75% capacity. Before making this move, we should clear out slow-moving stock in both warehouses to lower transfer costs and create space in the South warehouse.
-
-This analysis is based on my basic understanding of teh domain knowledge, but for a more accurate evaluation, we should consider other factors to refine these recommendations.
+* Outliers were excluded from the analysis, particularly orders with a delivery time of 65 days or more. These outliers likely represent exceptional cases (e.g., customer issues) and could distort the overall shipping time trends and lead to misleading conclusions about operational efficiency.
+  
+* The data covers a period from January 2003 to May 2005 (2.5 years), which includes various seasonal fluctuations in sales and stock levels. Revenue and stock sales patterns may differ during peak or off-peak seasons, and this variability should be factored into any long-term conclusions.
+  
+* __Industry Knowledge and Data Limitations__: The recommendations are based on my industry knowledge and a basic analysis of the available data. However, it's important to note that the data used may have gaps or inaccuracies (e.g., missing details on promotions, supplier issues, or market trends), which could affect the precision of these insights. Additional market research or external data sources would be helpful for a more refined analysis.
