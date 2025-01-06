@@ -6,10 +6,11 @@
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
 - [Insights Deep Dive](#insights-deep-dive)
-- [Recommendations](#recommendations)
-- [Assumptions and Caveats](#assumptions-and-caveats)
+- [Recommendations:](#recommendations)
+- [Assumptions and Caveats:](#assumptions-and-caveats)
 
 <!-- /TOC -->
+
 Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
 
 My task is to conduct an exploratory data analysis (EDA) to investigate if there are any patterns or themes that may influence the reduction or reorganization of inventory in the Mint Classics storage facilities.
@@ -34,15 +35,15 @@ An interactive Google Looker dashboard used to report and explore inventory data
 
 The companies main database structure as seen below consists of nine tables: warehouses, products, productlines, orders, orderdetails, customers, payments, employees, offices, with a total row count of 3,868 records. A description of each table is as follows:
 
-- __warehouses:__ Stores information about the company's warehouses, including location and capacity. The company has 4 distinct warehouses.
-- __products:__ Contains details about the products available for sale, such as name, price, and stock. The company offers 110 products.
-- __productlines:__ Categorizes products into different lines or types. The company has 7 distinct product lines.
-- __orders:__ Stores customer orders, including order dates, status, and total amounts. The company has 326 orders.
-- __orderdetails:__ Contains individual product details for each order, such as quantity, price, and discount. There are 2,996 order details.
-- __customers:__  Contains customer information, such as names, contact details, and shipping addresses. There are 122 distinct customers.
-- __payments:__ Tracks customer payments, including amount, date, and payment method. There are 273 payment records.
-- __employees:__ Stores details about employees, including positions, hire dates, and salaries. The company employs 23 people.
-- __offices:__ Information about the company's offices, including location and contact details. The company has 7 offices.
+- __warehouses (4 records):__ Stores information about the company's warehouses, including location and capacity.
+- __products (110 records):__ Contains details about the products available for sale, such as name, price, and stock.
+- __productlines (7 records):__ Categorizes products into different lines or types.
+- __orders (326 records):__ Stores customer orders, including order dates, status, and total amounts.
+- __orderdetails (2,996 orders):__ Contains individual product details for each order, such as quantity, price, and discount.
+- __customers (122 records):__  Contains customer information, such as names, contact details, and shipping addresses.
+- __payments (273 records):__ Tracks customer payments, including amount, date, and payment method.
+- __employees (23 people):__ Stores details about employees, including positions, hire dates, and salaries.
+- __offices (7 records):__ Information about the company's offices, including location and contact details.
 
 __Entity Relationship Diagram here__
 
