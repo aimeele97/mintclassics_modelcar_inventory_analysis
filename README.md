@@ -8,12 +8,7 @@
 - [Project Background](#project-background)
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
-        - [Overview of Findings](#overview-of-findings)
 - [Insights Deep Dive](#insights-deep-dive)
-        - [Category 1: Where are items stored and if they were rearranged?](#category-1-where-are-items-stored-and-if-they-were-rearranged)
-        - [Category 2: How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?](#category-2-how-are-inventory-numbers-related-to-sales-figures-do-the-inventory-counts-seem-appropriate-for-each-item)
-        - [Category 3: What is the average shipping time for each product line?](#category-3-what-is-the-average-shipping-time-for-each-product-line)
-        - [Category 4: Are we storing items that are not moving? Are any items candidates for being dropped from the product line?](#category-4-are-we-storing-items-that-are-not-moving-are-any-items-candidates-for-being-dropped-from-the-product-line)
 - [Recommendations:](#recommendations)
 - [Assumptions and Caveats:](#assumptions-and-caveats)
 
