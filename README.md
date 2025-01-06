@@ -6,17 +6,10 @@
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
 - [Insights Deep Dive](#insights-deep-dive)
-- [Recommendations:](#recommendations)
-- [Assumptions and Caveats:](#assumptions-and-caveats)
+- [Recommendations](#recommendations)
+- [Assumptions and Caveats](#assumptions-and-caveats)
 
-<!-- /TOC -->
-Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
-
-My task is to conduct an exploratory data analysis (EDA) to investigate if there are any patterns or themes that may influence the reduction or reorganization of inventory in the Mint Classics storage facilities.
-
-Insights and recommendations are provided on the following key areas:
-
-- **Category 1:** Where are items stored and if they were rearranged?
+<!-- /TOC -->1:** Where are items stored and if they were rearranged?
 - **Category 2:** How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?
 - **Category 3:** What is the average shipping time for each product line?
 - **Category 4:** Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
