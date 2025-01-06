@@ -3,6 +3,7 @@
 # Table of Contents
 <!-- TOC -->
 
+- [Overview](#overview)
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
 - [Insights Deep Dive](#insights-deep-dive)
@@ -10,11 +11,6 @@
 - [Assumptions and Caveats:](#assumptions-and-caveats)
 
 <!-- /TOC -->
-
-Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
-
-My task is to conduct an exploratory data analysis (EDA) to investigate if there are any patterns or themes that may influence the reduction or reorganization of inventory in the Mint Classics storage facilities.
-
 Insights and recommendations are provided on the following key areas:
 
 - **Category 1:** Where are items stored and if they were rearranged?
@@ -42,7 +38,7 @@ The companies main database structure as seen below consists of nine tables: war
 - __orderdetails (2,996 orders):__ Contains individual product details for each order, such as quantity, price, and discount.
 - __customers (122 records):__  Contains customer information, such as names, contact details, and shipping addresses.
 - __payments (273 records):__ Tracks customer payments, including amount, date, and payment method.
-- __employees (23 people):__ Stores details about employees, including positions, hire dates, and salaries.
+- __employees (23 records):__ Stores details about employees, including positions, hire dates, and salaries.
 - __offices (7 records):__ Information about the company's offices, including location and contact details.
 
 __Entity Relationship Diagram here__
