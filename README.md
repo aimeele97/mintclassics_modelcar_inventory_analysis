@@ -3,8 +3,6 @@
 # Table of Contents
 <!-- TOC -->
 
-- [Mint Classics Inventory and Warehouse Management](#mint-classics-inventory-and-warehouse-management)
-- [Table of Contents](#table-of-contents)
 - [Project Background](#project-background)
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
@@ -12,9 +10,7 @@
 - [Recommendations:](#recommendations)
 - [Assumptions and Caveats:](#assumptions-and-caveats)
 
-<!-- /TOC -->
-
-# Project Background
+<!-- /TOC -->kground
 Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
 
 My task is to conduct an exploratory data analysis (EDA)to investigate if there are any patterns or themes that may influence the reduction or reorganization of inventory in the Mint Classics storage facilities.
