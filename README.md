@@ -47,7 +47,7 @@ The companies main database structure as seen below consists of nine tables: war
 
 __Entity Relationship Diagram here__
 
-  <img src="./img/image-18.png" alt="My Image" style="width: 600px; height: auto;">
+  <img src="./img/erd.png" alt="My Image" style="width: 600px; height: auto;">
 
   **Relationship explaination:**
   
@@ -63,7 +63,7 @@ __Entity Relationship Diagram here__
 
 To optimzie warehouse and inventory mangement, we should **close the West Warehouse** due to its lowest sale volume, revenue, and current stock value among others, along with long shipping times (5 days)and it only has a single product line (vintage cars). While the South Warehouse holds slower-moving products and is less operationally efficient than the East and North, it offers flexible delivery times, stores more product lines (Trains, Ships, Trucks and Buses) than the West, and generates higher revenue. Focusing on the East and North Warehouses, which have high sales, profitability, and underutilized capacity, making them key assets for continued growth and improve operations.
 
-  ![alt text](img/dashboard.png)
+  ![alt text](img/image-2.png)
 
 # Insights Deep Dive
 
@@ -77,8 +77,8 @@ To optimzie warehouse and inventory mangement, we should **close the West Wareho
   
 * **Main insight 2.** None of the four warehouses are operating at full capacity, with the West warehouse running at just 50%, the lowest among others.
 
-  ![alt text](img/image-16.png)
-  ![alt text](img/image-9.png)
+  ![alt text](img/image-3.png)
+  ![alt text](img/image-4.png)
 
 ### Category 2: How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?
 
@@ -91,7 +91,7 @@ To optimzie warehouse and inventory mangement, we should **close the West Wareho
   
 * **Main insight 3.** There is a significant excess inventory compared to actual sales. The average sales percentage is only 0.7% of the total stock.
 
-  ![alt text](img/image-12.png)
+  ![alt text](img/image-5.png)
 
 
 ### Category 3: What is the average shipping time for each product line?
@@ -101,7 +101,7 @@ To optimzie warehouse and inventory mangement, we should **close the West Wareho
     - Trains: Fastest shipping time (2 days).
     -  Ships and Vintage Cars: Slowest shipping times (average 5 days).
 
-  ![alt text](img/image-13.png)
+  ![alt text](img/image-6.png)
 
 
 ### Category 4: Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
