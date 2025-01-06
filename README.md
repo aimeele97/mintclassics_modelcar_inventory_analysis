@@ -51,7 +51,7 @@ __Entity Relationship Diagram here__
 
   **Relationship explaination:**
   
-  <img src="./img/image-1.png" alt="ERD Relationship" style="width: auto; height: auto;">
+  ![alt text](image.png)
   
   - ___one to one:___ each record in Entity A is related to exactly one record in Entity B, and vice versa.
   - ___one to many:___ each record in Entity A can be related to multiple records in Entity B, but each record in Entity B is related to only one record in Entity A.
@@ -62,7 +62,6 @@ __Entity Relationship Diagram here__
 ### Overview of Findings
 
 To optimize operations, focus on the East and North Warehouses, which have high sales, profitability, and underutilized capacity, making them key assets for continued growth. __The West Warehouse should be closed__ due to low revenue, long shipping times, and minimal impact on product diversity, with its stock moved to more efficient locations. The South Warehouse, while holding slower-moving products, should remain operational as a consolidation point with flexible delivery times, serving inventory clearance needs.
-        
 
   ![alt text](img/image-7.png)
 
