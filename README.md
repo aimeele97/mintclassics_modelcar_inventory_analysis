@@ -3,12 +3,11 @@
 # Table of Contents
 <!-- TOC -->
 
-- [Project Background](#project-background)
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
 - [Insights Deep Dive](#insights-deep-dive)
-- [Recommendations](#recommendations)
-- [Assumptions and Caveats](#assumptions-and-caveats)
+- [Recommendations:](#recommendations)
+- [Assumptions and Caveats:](#assumptions-and-caveats)
 
 <!-- /TOC -->
 Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
