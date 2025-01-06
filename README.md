@@ -53,7 +53,7 @@ __Entity Relationship Diagram here__
 
   **Relationship explaination:**
   
-  ![alt text](image.png)
+  ![alt text](img/img.png)
   
   - ___one to one:___ each record in Entity A is related to exactly one record in Entity B, and vice versa.
   - ___one to many:___ each record in Entity A can be related to multiple records in Entity B, but each record in Entity B is related to only one record in Entity A.
