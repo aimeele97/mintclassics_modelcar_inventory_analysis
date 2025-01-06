@@ -7,8 +7,8 @@
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
 - [Insights Deep Dive](#insights-deep-dive)
-- [Recommendations:](#recommendations)
-- [Assumptions and Caveats:](#assumptions-and-caveats)
+- [Recommendations](#recommendations)
+- [Assumptions and Caveats](#assumptions-and-caveats)
 
 <!-- /TOC -->
 
