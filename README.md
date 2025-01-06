@@ -28,7 +28,7 @@ The SQL queries for the data cheme are available here [link](./MintClassics_Sche
 
 The SQL queries regarding various business questions can be found here [link](./MintClassics_InventoryAnalysis.sql).
 
-An interactive Tableau dashboard used to report and explore sales trends can be found here [link](https://lookerstudio.google.com/reporting/af75d590-c579-4f56-a0ef-7c823bff2abe).
+An interactive Google Looker dashboard used to report and explore inventory data can be found here [link](https://lookerstudio.google.com/reporting/af75d590-c579-4f56-a0ef-7c823bff2abe).
 
 
 # Data Structure & Initial Checks
