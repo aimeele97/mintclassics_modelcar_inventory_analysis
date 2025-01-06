@@ -63,9 +63,9 @@ __Entity Relationship Diagram here__
 
 ### Overview of Findings
 
-To optimize operations, focus on the East and North Warehouses, which have high sales, profitability, and underutilized capacity, making them key assets for continued growth. __The West Warehouse should be closed__ due to low revenue, long shipping times, and minimal impact on product diversity, with its stock moved to more efficient locations. The South Warehouse, while holding slower-moving products, should remain operational as a consolidation point with flexible delivery times, serving inventory clearance needs.
+To optimzie warehouse and inventory mangement, we should **close the West Warehouse** due to its lowest sale volume, revenue, and current stock value among others, along with long shipping times (5 days)and it only has a single product line (vintage cars). While the South Warehouse holds slower-moving products and is less operationally efficient than the East and North, it offers flexible delivery times, stores more product lines (Trains, Ships, Trucks and Buses) than the West, and generates higher revenue. Focusing on the East and North Warehouses, which have high sales, profitability, and underutilized capacity, making them key assets for continued growth and improve operations.
 
-  ![alt text](img/image-7.png)
+  ![alt text](img/dashboard.png)
 
 # Insights Deep Dive
 
