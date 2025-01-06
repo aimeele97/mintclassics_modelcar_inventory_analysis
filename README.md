@@ -3,12 +3,19 @@
 # Table of Contents
 <!-- TOC -->
 
+- [Mint Classics Inventory and Warehouse Management](#mint-classics-inventory-and-warehouse-management)
+- [Table of Contents](#table-of-contents)
 - [Project Background](#project-background)
 - [Data Structure & Initial Checks](#data-structure--initial-checks)
 - [Executive Summary](#executive-summary)
+        - [Overview of Findings](#overview-of-findings)
 - [Insights Deep Dive](#insights-deep-dive)
-- [Recommendations](#recommendations)
-- [Assumptions and Caveats](#assumptions-and-caveats)
+        - [Category 1: Where are items stored and if they were rearranged?](#category-1-where-are-items-stored-and-if-they-were-rearranged)
+        - [Category 2: How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?](#category-2-how-are-inventory-numbers-related-to-sales-figures-do-the-inventory-counts-seem-appropriate-for-each-item)
+        - [Category 3: What is the average shipping time for each product line?](#category-3-what-is-the-average-shipping-time-for-each-product-line)
+        - [Category 4: Are we storing items that are not moving? Are any items candidates for being dropped from the product line?](#category-4-are-we-storing-items-that-are-not-moving-are-any-items-candidates-for-being-dropped-from-the-product-line)
+- [Recommendations:](#recommendations)
+- [Assumptions and Caveats:](#assumptions-and-caveats)
 
 <!-- /TOC -->
 
@@ -135,5 +142,3 @@ Throughout the analysis, multiple assumptions were made to manage challenges wit
 * Outliers were excluded from the analysis, particularly orders with a delivery time of 65 days or more. These outliers likely represent exceptional cases (e.g., customer issues) and could distort the overall shipping time trends and lead to misleading conclusions about operational efficiency.
   
 * The data covers a period from January 2003 to May 2005 (2.5 years), which includes various seasonal fluctuations in sales and stock levels. Revenue and stock sales patterns may differ during peak or off-peak seasons, and this variability should be factored into any long-term conclusions.
-  
-* __Industry Knowledge and Data Limitations__: The recommendations are based on my industry knowledge and a basic analysis of the available data. However, it's important to note that the data used may have gaps or inaccuracies (e.g., missing details on promotions, supplier issues, or market trends), which could affect the precision of these insights. Additional market research or external data sources would be helpful for a more refined analysis.
