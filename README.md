@@ -24,7 +24,7 @@ Insights and recommendations are provided on the following key areas:
 - **Category 3:** What is the average shipping time for each product line?
 - **Category 4:** Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
 
-The SQL queries for the dataset source are available here [link](./MintClassics_Scheme.sql).
+The SQL queries for the data cheme are available here [link](./MintClassics_Scheme.sql).
 
 The SQL queries regarding various business questions can be found here [link](./MintClassics_InventoryAnalysis.sql).
 
