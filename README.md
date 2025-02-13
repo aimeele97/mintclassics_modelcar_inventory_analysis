@@ -14,9 +14,9 @@
 
 # Project Background
 
-Mint Classics Company, a retailer of classic model cars and other vehicles, is looking at closing one of their storage facilities. To support a data-based business decision, they are looking for suggestions and recommendations for reorganizing or reducing inventory, while still maintaining timely service to their customers. For example, they would like to be able to ship a product to a customer within 24 hours of the order being placed.
+Mint Classics Company, a retailer specializing in classic model cars and vehicles, is evaluating the possibility of closing one of its storage facilities. To make an informed, data-driven decision, the company seeks insights into how inventory could be reorganized or reduced, while still ensuring timely customer service—specifically, the ability to ship products within 24 hours of an order being placed.
 
-My task is to conduct an exploratory data analysis (EDA) to investigate if there are any patterns or themes that may influence the reduction or reorganization of inventory in the Mint Classics storage facilities.
+As part of this effort, I was tasked with conducting an exploratory data analysis (EDA) to identify any patterns or trends that could influence decisions around warehouse operations and inventory management.
 
 Insights and recommendations are provided on the following key areas:
 
@@ -141,11 +141,11 @@ Based on the findings, here are several key areas to focus on:
 
 Several assumptions and considerations were made during the analysis to ensure the data was accurately interpreted, and to account for any limitations or anomalies. These are outlined below:
 
-* Exclusion of Outliers:  
+* **Exclusion of Outliers**:  
    Outliers, particularly orders with unusually long delivery times (over 65 days), were excluded from the analysis. These outliers were considered exceptional cases, such as customer-specific issues, and could distort overall trends in shipping times. Removing these extreme data points ensures that the analysis accurately reflects typical operational performance.
 
-* Data Completeness and Consistency:  
+* **Data Completeness and Consistency**:  
    Some records may have missing or inconsistent data, which could potentially affect certain analyses. Where possible, missing values were handled or excluded, but the quality and completeness of data should be continuously monitored to ensure future analyses remain robust and reliable.
 
-* Changes in Customer Behavior:  
+* **Changes in Customer Behavior**:  
    Customer behavior, such as demand for specific product lines, may have shifted during the study period, especially as new products or promotions were introduced. These changes could impact trends in inventory needs and shipping efficiency, and should be considered when making any forward-looking decisions about warehouse operations.
