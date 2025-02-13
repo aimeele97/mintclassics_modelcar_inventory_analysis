@@ -64,7 +64,13 @@ __Entity Relationship Diagram here__
 
 ### Overview of Findings
 
-To optimzie warehouse and inventory mangement, we should **close the West Warehouse** due to its lowest sale volume, revenue, and current stock value among others, along with long shipping times (5 days)and it only has a single product line (vintage cars). While the South Warehouse holds slower-moving products and is less operationally efficient than the East and North, it offers flexible delivery times, stores more product lines (Trains, Ships, Trucks and Buses) than the West, and generates higher revenue. Focusing on the East and North Warehouses, which have high sales, profitability, and underutilized capacity, making them key assets for continued growth and improve operations.
+After conducting a thorough analysis of Mint Classics' warehouse operations, several key insights were identified to assist in optimizing the company’s warehouse and inventory management. Below are the highlights:
+
+- West Warehouse: This facility has the lowest sales volume and revenue, and it only stores a single product line (Vintage Cars). Shipping times are also notably slower (5 days), which could impact customer satisfaction. Additionally, its capacity utilization is only 50%, the lowest among all warehouses.
+
+- South Warehouse: While this warehouse has slower-moving products and lower operational efficiency compared to the East and North Warehouses, it stores multiple product lines (Trains, Ships, Trucks, and Buses), and its delivery times are more flexible.
+
+- East and North Warehouses: Both of these facilities are more profitable, with high sales and relatively underutilized capacity. These warehouses are key assets for the company's growth, and their operational efficiency presents an opportunity for further improvement.
 
   ![alt text](img/dashboard.png)
 
@@ -117,22 +123,29 @@ To optimzie warehouse and inventory mangement, we should **close the West Wareho
 
 # Recommendations:
 
-Based on the insights and findings above, we would recommend the executive team to consider the following: 
+Based on the findings, here are several key areas to focus on:
 
-* __Close the West Warehouse__: It operates at low capacity, holds a single product line, and has long delivery times.
-  
-* Focus on East and North Warehouses for continued operation due to their profitability and available capacity.
-  
-* Reorganize the South Warehouse: With 75% capacity utilization and flexible shipping times, it could serve as a consolidation point for slower-moving products.
-  
-* Clearance of slow-moving stock in the Vintage Cars and Classic Cars product lines is recommended to optimize storage and free up space for high-demand items.
-  
-* Monitor and adjust stock levels regularly based on sales trends to avoid overstocking or stockouts.
+* **Assess Warehouse Utilization and Performance**:  
+   The West Warehouse is underperforming in terms of sales and capacity utilization. It only stores one product line, which might limit its potential for growth. A closer look at its long-term profitability and shipping times compared to other warehouses is recommended.
+
+* **Consolidate Product Lines**:  
+   While the South Warehouse stores a diverse range of products, it may benefit from better organization of slower-moving stock. However, its flexibility in shipping times makes it a potentially valuable warehouse for handling more diverse product lines, especially when combined with a strategy to move slower products elsewhere.
+
+* **Focus on High-Performing Warehouses**:  
+   The East and North Warehouses demonstrate high sales and profitability. These warehouses have more underutilized capacity, presenting an opportunity to optimize their operations and potentially absorb products or operations from other facilities.
+
+* **Review Slow-Moving Inventory**:  
+   Vintage Cars and Classic Cars are slow-moving product lines, especially in the West Warehouse. A strategy to review, possibly reorganize or offload these slower-moving products, could free up valuable storage space and improve overall efficiency.
 
 # Assumptions and Caveats:
 
-Throughout the analysis, multiple assumptions were made to manage challenges with the data. These assumptions and caveats are noted below:
+Several assumptions and considerations were made during the analysis to ensure the data was accurately interpreted, and to account for any limitations or anomalies. These are outlined below:
 
-* Outliers were excluded from the analysis, particularly orders with a delivery time of 65 days or more. These outliers likely represent exceptional cases (e.g., customer issues) and could distort the overall shipping time trends and lead to misleading conclusions about operational efficiency.
-  
-* The data covers a period from January 2003 to May 2005 (2.5 years), which includes various seasonal fluctuations in sales and stock levels. Revenue and stock sales patterns may differ during peak or off-peak seasons, and this variability should be factored into any long-term conclusions.
+* Exclusion of Outliers:  
+   Outliers, particularly orders with unusually long delivery times (over 65 days), were excluded from the analysis. These outliers were considered exceptional cases, such as customer-specific issues, and could distort overall trends in shipping times. Removing these extreme data points ensures that the analysis accurately reflects typical operational performance.
+
+* Data Completeness and Consistency:  
+   Some records may have missing or inconsistent data, which could potentially affect certain analyses. Where possible, missing values were handled or excluded, but the quality and completeness of data should be continuously monitored to ensure future analyses remain robust and reliable.
+
+* Changes in Customer Behavior:  
+   Customer behavior, such as demand for specific product lines, may have shifted during the study period, especially as new products or promotions were introduced. These changes could impact trends in inventory needs and shipping efficiency, and should be considered when making any forward-looking decisions about warehouse operations.
