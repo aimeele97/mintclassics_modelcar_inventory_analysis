@@ -33,7 +33,6 @@ The SQL queries regarding various business questions can be found here [link](./
 
 An interactive Google Looker dashboard used to report and explore inventory data can be found here [link](https://lookerstudio.google.com/reporting/af75d590-c579-4f56-a0ef-7c823bff2abe).
 
-
 # Data Structure & Initial Checks
 
 The companies main database structure as seen below consists of nine tables: warehouses, products, productlines, orders, orderdetails, customers, payments, employees, offices, with a total row count of 3,868 records. A description of each table is as follows:
@@ -71,8 +70,8 @@ After conducting a thorough analysis of Mint Classics' warehouse operations, sev
 - South Warehouse: While this warehouse has slower-moving products and lower operational efficiency compared to the East and North Warehouses, it stores multiple product lines (Trains, Ships, Trucks, and Buses), and its delivery times are more flexible.
 
 - East and North Warehouses: Both of these facilities are more profitable, with high sales and relatively underutilized capacity. These warehouses are key assets for the company's growth, and their operational efficiency presents an opportunity for further improvement.
-- 
-<img width="1035" alt="image" src="https://github.com/user-attachments/assets/0ffe3698-f1b9-4936-b6e5-7062aa9cc75a" />
+
+  <img width="1035" alt="image" src="https://github.com/user-attachments/assets/0ffe3698-f1b9-4936-b6e5-7062aa9cc75a" />
 
 # Insights Deep Dive
 
