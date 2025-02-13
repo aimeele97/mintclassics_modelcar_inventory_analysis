@@ -20,10 +20,10 @@ As part of this effort, I was tasked with conducting an exploratory data analysi
 
 Insights and recommendations are provided on the following key areas:
 
-- **Category 1:** Where are items stored and if they were rearranged?
-- **Category 2:** How are inventory numbers related to sales figures? Do the inventory counts seem appropriate for each item?
-- **Category 3:** What is the average shipping time for each product line?
-- **Category 4:** Are we storing items that are not moving? Are any items candidates for being dropped from the product line?
+- **Category 1:** Analysis of where items are stored and how rearrangement might impact efficiency.
+- **Category 2:** Evaluation of the relationship between inventory levels and sales figures, and whether the current inventory counts are appropriate for each product.
+- **Category 3:** Review of the average shipping time for each product line to assess service levels.
+- **Category 4:** Identification of slow-moving inventory that may no longer be viable and could potentially be removed from the product line.
 
 The SQL queries for the data cheme are available here [link](./Data_Scheme.sql).
 
